@@ -7,12 +7,12 @@ For questions about the code and analyses: emily.oconnor@biol.lu.se
 
 Analyses were run using the workflow manager Nextflow (version 23.10.0)
 
-code/
+```
  | - env/                                    Contains YAML file to re-create the nextflow environment used to run the workflows
  | - nonpartitioned/                         Contains workflow script (main.nf) and configuration file (nextflow.config) to run selection analyses (BUSTED, MEME & FUBAR) on non-partitioned dataset  
  | - partitioned/                            Contains workflow script (main.nf) and configuration file (nextflow.config) to run BUSTED-PH test on partitioned dataset. Also contains HyPhy batch file required to run BUSTED-PH
  
- Note that when running partitioned analyses (BUSTED-PH) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags.   
+ ```
  
 # Implementation
 
@@ -36,6 +36,8 @@ nextflow run main.nf
 Note that the Nextflow scripts (main.nf) call containers to run most of the software (CodonPhyML, PRANK & HyPhy). So you will require internet connection to run the scripts successfully as well having docker installed on your computer / server in order to enable you to run containers. 
 
 The workflow takes one alignment file at a time and thus needs to be run multiple times to reproduce all the results described in the paper. 
+
+ Note that when running partitioned analyses (BUSTED-PH) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags.   
 
 
 
