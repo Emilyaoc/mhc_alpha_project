@@ -3,7 +3,7 @@
 This repository contains the scripts used to conduct the analyses in the manuscript "Expansion of MHC-IIB has constrained the evolution of MHC-IIA in passerines"
 Iris L. Ruesink-Bueno, Anna Drews, Emily O’Connor and Helena Westerdahl
 
-For questions about the code and analyses: emily.oconnor@biol.lu.se 
+Workflow written and run by Emily O'Connor (08-04-2024)
 
 Analyses were run using the workflow manager Nextflow (version 23.10.0)
 
