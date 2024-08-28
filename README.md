@@ -3,8 +3,6 @@
 This repository contains the scripts used to conduct the analyses in the manuscript "Expansion of MHC-IIB has constrained the evolution of MHC-IIA in passerines"
 Iris L. Ruesink-Bueno, Anna Drews, Emily O’Connor and Helena Westerdahl
 
-Code written and run by Emily O'Connor (2024-03-03) 
-
 For questions about the code and analyses: emily.oconnor@biol.lu.se 
 
 Analyses were run using the workflow manager Nextflow (version 23.10.0)
@@ -39,7 +37,7 @@ Note that the Nextflow scripts (main.nf) call containers to run most of the soft
 
 The workflow takes one alignment file at a time and thus needs to be run multiple times to reproduce all the results described in the paper. 
 
- Note that when running partitioned analyses (BUSTED-PH) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags.   
+ Note that when running partitioned analyses (BUSTED-PH & RELAX) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags for BUSTED-PH and the '--test' and '--reference' flags for RELAX.   
 
 
 
