@@ -18,7 +18,7 @@ Analyses were run using the workflow manager Nextflow (version 23.10.0)
 
 To reproduce and run the code in Nextflow first create and activate the conda environment (giving it the name 'nextflow-env') that contains the version of Nextflow used to run the analyses in our study and its dependencies. To create the conda environment from the YAML file in the 'env' folder run the following command from within the 'env' folder (note that you will need conda installed for this to work):
 ```
-conda env create -n nextlow-env -f environment.yml
+conda env create -n nextlow-env -f nextflow_environment.yml
 ```
 
 The conda environment can then be activated using the following command:
@@ -32,12 +32,10 @@ The 'partitioned' and 'nonpartitioned' folders each contain a file called 'main.
 ```
 nextflow run main.nf
 ```
-
-Note that the Nextflow scripts (main.nf) call containers to run most of the software (CodonPhyML, PRANK & HyPhy). So you will require internet connection to run the scripts successfully as well having docker installed on your computer / server in order to enable you to run containers. 
-
 The workflow takes one alignment file at a time and thus needs to be run multiple times to reproduce all the results described in the paper. 
 
- Note that when running partitioned analyses (BUSTED-PH & RELAX) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags for BUSTED-PH and the '--test' and '--reference' flags for RELAX.   
+Note I: The Nextflow scripts (main.nf) call containers to run most of the software (CodonPhyML, PRANK & HyPhy). Therefore you will require internet connection to run the scripts successfully (at least the first time you run the workflow) as well having a container solution such as docker or singularity installed on your computer / server.
 
+Note II: when running partitioned analyses (BUSTED-PH & RELAX) the input tree needs to be labelled with labels that match the '--branches' and '--comparison' flags for BUSTED-PH and the '--test' and '--reference' flags for RELAX.   
 
 
