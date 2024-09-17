@@ -15,7 +15,7 @@ workflow {
 
 // Process definition
 process CONVERT_IN_PRANK {
-    container "biocontainers/prank" // this initiates a container with the PRANK software 
+    container "quay.io/biocontainers/prank:v.170427--h9f5acd7_5" // this initiates a container with the PRANK software 
     publishDir "results/",
     mode: "copy"
 
@@ -51,7 +51,7 @@ process RUN_CODONPHYML {
 }
 
 process HYPHY_MEME {
-    container "biocontainers/hyphy-common" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy-common:v2.3.14dfsg-1-deb_cv1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -70,7 +70,7 @@ process HYPHY_MEME {
 }
 
 process HYPHY_FUBAR {
-    container "biocontainers/hyphy-common" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy-common:v2.3.14dfsg-1-deb_cv1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -89,7 +89,7 @@ process HYPHY_FUBAR {
 }
 
 process HYPHY_BUSTED {
-    container "biocontainers/hyphy-common" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy-common:v2.3.14dfsg-1-deb_cv1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
