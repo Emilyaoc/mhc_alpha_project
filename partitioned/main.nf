@@ -13,7 +13,7 @@ workflow {
 
 // Process definition
 process HYPHY_BUSTED_PH {
-    container "biocontainers/hyphy-common" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -27,13 +27,13 @@ process HYPHY_BUSTED_PH {
 
     script: // this script runs BUSTED-PH batch file using the input tree (gene tree produced ny CodonPhyML previously & annotated) and the aligned sequences
     """
-    hyphy /home/code/partitioned/BUSTED-PH.bf --alignment ${alignment} --tree ${gene_tree} --branches P --comparison NP 
+    hyphy BUSTED-PH.bf --alignment ${alignment} --tree ${gene_tree} --branches P --comparison NP 
 
     """
 }
 
 process HYPHY_RELAX {
-    container "biocontainers/hyphy-common" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
