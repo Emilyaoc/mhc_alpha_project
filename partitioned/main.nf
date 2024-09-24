@@ -5,9 +5,10 @@ workflow {
     // Define input files (note this uses the path defined in the nextflow.config file)
     ch_input_seq = Channel.fromPath(params.input_seqs)
     ch_input_tree = Channel.fromPath(params.input_tree)
+    ch_busted_ph = Channel.fromPath(params.busted_ph_bf)
 
     // Run workflow
-    HYPHY_BUSTED_PH ( ch_input_seq, ch_input_tree )
+    HYPHY_BUSTED_PH ( ch_input_seq, ch_input_tree, ch_busted_ph.collect() )
     HYPHY_RELAX ( ch_input_seq, ch_input_tree )
 }
 
@@ -20,6 +21,7 @@ process HYPHY_BUSTED_PH {
     input:
     path(alignment)
     path(gene_tree)
+    path(batch_file)
     
 
     output:
@@ -27,7 +29,7 @@ process HYPHY_BUSTED_PH {
 
     script: // this script runs BUSTED-PH batch file using the input tree (gene tree produced ny CodonPhyML previously & annotated) and the aligned sequences
     """
-    hyphy BUSTED-PH.bf --alignment ${alignment} --tree ${gene_tree} --branches P --comparison NP 
+    hyphy ${batch_file} --alignment ${alignment} --tree ${gene_tree} --branches P --comparison NP 
 
     """
 }
