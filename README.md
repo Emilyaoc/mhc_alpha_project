@@ -39,7 +39,7 @@ Note I: The Nextflow scripts (main.nf) call containers to run most of the softwa
 nextflow run main.nf -profile singularity 
 ```
 
-If running the workflow on a mac with an apple silicon chip, adjust the command as follows:
+If running the workflow on a mac with an apple silicon chip, adjust the command to use appropriate profile as follows:
 ```
 nextflow run main.nf -profile docker,arm 
 ```
