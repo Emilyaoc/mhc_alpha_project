@@ -14,7 +14,7 @@ workflow {
 
 // Process definition
 process HYPHY_BUSTED_PH {
-    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.50--h91ae1e9_1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -35,7 +35,7 @@ process HYPHY_BUSTED_PH {
 }
 
 process HYPHY_RELAX {
-    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.50--h91ae1e9_1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
