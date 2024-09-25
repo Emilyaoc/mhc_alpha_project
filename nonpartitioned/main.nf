@@ -51,7 +51,7 @@ process RUN_CODONPHYML {
 }
 
 process HYPHY_MEME {
-    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.50--h91ae1e9_1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -70,7 +70,7 @@ process HYPHY_MEME {
 }
 
 process HYPHY_FUBAR {
-    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.50--h91ae1e9_1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
@@ -89,7 +89,7 @@ process HYPHY_FUBAR {
 }
 
 process HYPHY_BUSTED {
-    container "quay.io/biocontainers/hyphy:2.5.31--h48c199c_0" // this initiates a container with the HyPhy software 
+    container "quay.io/biocontainers/hyphy:2.5.50--h91ae1e9_1" // this initiates a container with the HyPhy software 
     publishDir "results/",
     mode: "copy"
 
